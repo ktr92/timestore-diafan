@@ -1,0 +1,46 @@
+Обновление
+---------
+
+Если у вас установлена DIAFAN.CMS версии 5.3, то вы можете бесплатно обновится до текущей версии 6.0.
+Для этого проделайте следующие шаги:
+
+1. сохраните резервную копию сайта (сделайте дамп базы и сохрание файлы сайта);
+
+2. Удалите папки и файлы:
+/adm/
+/includes/
+/installation/
+/modules/
+/plugins/
+index.php
+update.php
+
+3. скопируйте папки и файлы из пакета 6.0:
+/adm/
+/css/jquery.imgareaselect/
+/css/custom-theme/
+/css/codemirror/
+/css/fancybox
+/img/timecalendar/
+/includes/
+/js/ - поверх имеющейся папки
+/modules/
+/plugins/
+/return/
+/custom/
+/themes/functions/
+index.php
+update.php
+ 
+4. убедитесь, что права на файл config.php, index.html, а также на папки return, custom, cache, tmp, userfiles (и все вложенные) равны 777;
+
+5. в строке браузера наберите site.ru/update.php и нажмите Enter. Вы должны увидеть надпись "Обновление успешно завершено!";
+
+6. удалите файлы update.php, UPDATE.txt;
+
+7. Шаблонные теги:
+- добавьте <insert name="show_head">
+- удалите теги <title></title> и <meta name="keywords"..>, <meta name="description" ...>
+- переместите <insert name="show_js"> в конец шаблона перед закрывающим тегом </body>
+
+Поздравляем! Обновление завершено.
